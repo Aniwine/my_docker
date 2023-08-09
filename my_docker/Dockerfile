@@ -105,15 +105,15 @@ RUN echo export PATH=$PATH:/usr/local/miniconda3/bin:/usr/local/sbin:/usr/local/
 RUN	pip install torch==1.12.0+cu102 torchvision==0.13.0+cu102 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu102
 
 #安装mmcv，mmengine，mmdet
-WORKDIR /project
-COPY	pycocotools.tar.gz /project/ 
+WORKDIR /my_lib
+COPY	pycocotools.tar.gz /my_lib/ 
 
-RUN	cd /project  \
-	&& chmod 777 /project/pycocotools.tar.gz \
+RUN	cd /my_lib  \
+	&& chmod 777 /my_lib/pycocotools.tar.gz \
 	&& tar -xzf pycocotools.tar.gz \
 	&& cd pycocotools-2.0.6 \
 	&& pip install -e . \
-	&& rm -f /project/pycocotools.tar.gz
+	&& rm -f /my_lib/pycocotools.tar.gz
 
 RUN	pip install -U openmim \
 	&& ln -s -f /usr/local/miniconda3/bin/mim /usr/bin/mim \
@@ -122,6 +122,7 @@ RUN	pip install -U openmim \
 	&& mim install "mmdet>=3.0.0rc6,<3.1.0" \
 	&& mim install "mmyolo"
 
+WORKDIR /project
 #开启ssh
 RUN	su -c "apt-get install sudo" \	
 	&& su -c  '/etc/init.d/ssh start'
