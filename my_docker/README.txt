@@ -29,5 +29,5 @@
 
 6.注意事项
      1).pytorch的版本需要兼容宿主机的cuda版本，默认为10.2，如需更换版本，
-        请到https://pytorch.org/get-started/previous-versions/查询并修改Dockerfile第105行处；
+        请到https://pytorch.org/get-started/previous-versions/    查询并修改Dockerfile第105行处；
      2).宿主机的docker版本需大于19.
