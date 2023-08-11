@@ -12,7 +12,7 @@
 
 4.创建容器
 #源代码通过文件夹映射方式传递到docker容器内，源代码目录结构为：
-#注：.../data/test下包含的为项目所有文件(...代表完整路径)，目录结构为
+#注：/sda2/data/development/project/luocheng/data/test下包含的为项目所有文件，目录结构为（省略了前面部分）
      .
     └── data
     └── test
