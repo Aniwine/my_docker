@@ -123,9 +123,10 @@ RUN	pip install -U openmim \
 	&& mim install "mmyolo"
 
 WORKDIR /project
+
+RUN	su -c "apt-get install sudo" 	
 #开启ssh
-RUN	su -c "apt-get install sudo" \	
-	&& su -c  '/etc/init.d/ssh start'
+#CMD	su -c  '/etc/init.d/ssh start'
 
 #项目代码
 #通过文件映射的方式传递到docker容器内。
