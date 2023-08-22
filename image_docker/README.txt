@@ -19,8 +19,8 @@
         ├── application
         └── serve
 #则将.../data/test文件夹映射到容器内/project文件夹下，创建命令如下：
-     docker run -itd --gpus all --shm-size=8g  --name yolos -p 13080:8080 -p 13081:8081 -p 13082:8082 -p 13083:8083 -p 
-     13084:8084  -p 13085:8085 -p 12086:8086 -p 14022:22  -v /home/luocheng/docker_env/volume:/project/ 
+     docker run -itd --gpus all --shm-size=32g  --name yolos -p 13080:8080 -p 13081:8081 -p 13082:8082 -p 13083:8083 -p 
+     13084:8084  -p 13085:8085 -p 13086:8086 -p 14022:22  -v /home/luocheng/docker_env/volume:/project/ 
      image_process:v1 /bin/bash
 
 5.使用说明
