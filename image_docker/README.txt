@@ -19,9 +19,9 @@
         ├── application
         └── serve
 #则将.../data/test文件夹映射到容器内/project文件夹下，创建命令如下：
-     docker run -itd --gpus all --shm-size=8g -u ai --name lc_photodevelop -p 12080:8080 -p 12081:8081 -p 12082:8082 -p 12083:8083 -p 
-     12084:8084  -p 12085:8085 -p 12086:8086 -p 13022:22  -v /sda2/data/development/project/luocheng/data/test:/project/ 
-     -v  /usr/local/cuda-11.2/targets/x86_64-linux/lib:/usr/local/cuda-11.2/lib64 edu_photo:cuda_py3.10 /bin/bash
+     docker run -itd --gpus all --shm-size=8g  --name yolos -p 13080:8080 -p 13081:8081 -p 13082:8082 -p 13083:8083 -p 
+     13084:8084  -p 13085:8085 -p 12086:8086 -p 14022:22  -v /home/luocheng/docker_env/volume:/project/ 
+     image_process:v1 /bin/bash
 
 5.使用说明
      1).请使用 source activate base激活虚拟环境，使用base环境运行代码
