@@ -5,7 +5,7 @@
       |-pycocotools-2.0.6.tar.gz
       |-README.txt
 1.查看电脑ai用户uid和gid：id ai
-2.将查到的uid、gid替换Dockerfile第31行处的uid、gid并保存
+2.将查到的uid、gid替换Dockerfile第23、31行处的uid、gid并保存
 
 3.构建镜像,其中.表示Dockerfile所在目录，包含了所需拷贝至docker的文件
      docker build -t edu_photo:cuda_py3.10 .

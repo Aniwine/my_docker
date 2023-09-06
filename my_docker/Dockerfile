@@ -122,6 +122,9 @@ RUN	pip install -U openmim \
 	&& mim install "mmdet>=3.0.0rc6,<3.1.0" \
 	&& mim install "mmyolo"
 
+#安装服务
+RUN	pip install aiohttp
+
 WORKDIR /project
 
 RUN	su -c "apt-get install sudo" 	
